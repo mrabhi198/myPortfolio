@@ -1,0 +1,162 @@
+/* Extra Small Devices (portrait phones) */
+@media (max-width: 575.98px) {    
+    .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .contact-section .contact-info,
+    .contact-section .contact-form {
+        margin-bottom: 30px;
+    }
+
+    .about .profile-img {
+        margin-bottom: 30px;
+    }
+    
+    .resume-section .resume-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resume-section .resume-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+    
+    footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    footer .footer-links ul li {
+        justify-content: center;
+    }
+}
+
+/* Small Devices (landscape phones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .about .profile-img {
+        margin-bottom: 30px;
+    }
+    
+    .contact-section .contact-info {
+        margin-bottom: 30px;
+    }
+    
+    footer .footer-newsletter,
+    footer .footer-links {
+        margin-top: 30px;
+    }
+}
+
+/* Medium Devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .about .profile-img {
+        margin-bottom: 30px;
+    }
+    
+    .contact-section .contact-info {
+        margin-bottom: 30px;
+    }
+    
+    footer .footer-newsletter {
+        margin-top: 30px;
+    }
+}
+
+/* Large Devices (desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Adjustments for large screens if needed */
+}
+
+/* Extra Large Devices (large desktops) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Navigation Responsiveness */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--dark-color);
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .navbar-nav .nav-link {
+        text-align: center;
+    }
+}
+
+/* Project Cards Responsiveness */
+@media (max-width: 767.98px) {
+    .projects-section .project-links {
+        flex-direction: column;
+    }
+    
+    .projects-section .project-links a {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+/* Certificate Items Responsiveness */
+@media (max-width: 767.98px) {
+    .certificates .certificate-item {
+        text-align: center;
+    }
+}
+
+/* Resume Page Responsiveness */
+@media (max-width: 991.98px) {
+    .resume-section .resume-section-item {
+        margin-bottom: 30px;
+    }
+}
+
+/* Contact Form Responsiveness */
+@media (max-width: 767.98px) {
+    .contact-section .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+/* hero section */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 120px;
+        text-align: center;
+    }
+    
+    .hero-section p {
+        margin: 0 auto;
+    }
+    
+    .profile-img {
+        width: 250px;
+        height: 250px;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
