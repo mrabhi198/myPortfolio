@@ -174,3 +174,48 @@ function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
+
+// typewriter
+document.addEventListener('DOMContentLoaded', function() {
+    // Text strings to be typed
+    const textArray = [
+        "Computer Science Engineering Student",
+        "Android Developer",
+        "UI/UX Enthusiast",
+        "Problem Solver"
+    ];
+    
+    let textPosition = 0;
+    let speed = 100; // Typing speed in milliseconds
+    let textArrayIndex = 0;
+    let textElement = document.getElementById("typewriter-text");
+    
+    function typeWriter() {
+        if (textPosition < textArray[textArrayIndex].length) {
+            textElement.innerHTML += textArray[textArrayIndex].charAt(textPosition);
+            textPosition++;
+            setTimeout(typeWriter, speed);
+        } else {
+            // Pause at the end of a sentence
+            setTimeout(eraseText, 2000);
+        }
+    }
+    
+    function eraseText() {
+        if (textPosition > 0) {
+            textElement.innerHTML = textArray[textArrayIndex].substring(0, textPosition - 1);
+            textPosition--;
+            setTimeout(eraseText, speed/2);
+        } else {
+            // Move to next text in array
+            textArrayIndex++;
+            if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(typeWriter, 500);
+        }
+    }
+    
+    // Start the typewriter effect if element exists
+    if (textElement) {
+        setTimeout(typeWriter, 1000);
+    }
+});

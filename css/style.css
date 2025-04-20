@@ -295,6 +295,9 @@ a:hover {
     background-color: var(--secondary-color);
 }
 
+/* new  */
+
+
 /* Certificates */
 .certificates .certificate-item {
     background: var(--white-color);
@@ -760,4 +763,45 @@ footer .copyright {
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
+}
+
+/* Typewriter Effect Styling */
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid #4285f4; /* Cursor */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4285f4 }
+  }
+  
+  /* For responsive design - adjust typewriter width */
+  @media (max-width: 768px) {
+    .typewriter {
+      max-width: 100%;
+    }
+  }
+
+.cursor {
+    border-right: .15em solid #4285f4;
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4285f4 }
 }
