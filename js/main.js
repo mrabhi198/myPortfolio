@@ -179,10 +179,14 @@ function isValidEmail(email) {
 document.addEventListener('DOMContentLoaded', function() {
     // Text strings to be typed
     const textArray = [
-        "Computer Science Engineering Student",
         "Android Developer",
-        "UI/UX Enthusiast",
-        "Problem Solver"
+        "Java Programmer",
+        "Kotlin Enthusiast",
+        "Tech Innovator",
+        "Software Engineer",
+        "App Developer",
+        "Problem Solver",
+        "UI/UX Explorer"
     ];
     
     let textPosition = 0;

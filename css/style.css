@@ -547,6 +547,7 @@ a:hover {
 }
 
 /* Projects */
+/* Projects */
 .projects-section .project-card {
     background: linear-gradient(145deg, #1a1e30, #2a324d);
     border-radius: 12px;
@@ -556,6 +557,9 @@ a:hover {
     height: 100%;
     transition: var(--transition);
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .projects-section .project-card:hover {
@@ -564,10 +568,30 @@ a:hover {
     border-color: rgba(99, 102, 241, 0.3);
     box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
 }
-
-.projects-section .project-img {
+/* home page project */
+/* Project image card inside project card */
+.projects-section .project-img-card {
+    background: rgba(26, 30, 48, 0.7);
+    border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section .project-card:hover .project-img-card {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix for the image container */
+.projects-section .project-img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
     position: relative;
+    overflow: hidden;
 }
 
 .projects-section .project-img::after {
@@ -577,7 +601,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 50%, var(--card-color));
+    background: linear-gradient(to bottom, transparent 50%, rgba(26, 30, 48, 0.3));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -586,19 +610,33 @@ a:hover {
     opacity: 1;
 }
 
+/* Fix for the image itself */
 .projects-section .project-img img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: transform 0.3s ease;
 }
 
 .projects-section .project-card:hover .project-img img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+/* Optional caption for the image */
+.projects-section .project-img-caption {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    text-align: center;
+    background: rgba(26, 30, 48, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .projects-section .project-info {
-    padding: 25px;
+    padding: 10px 5px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-section .project-info h3 {
@@ -660,7 +698,8 @@ a:hover {
 .projects-section .project-links {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: auto; /* Push to bottom of container */
+    padding-top: 20px;
 }
 
 .projects-section .project-links a {
@@ -671,6 +710,13 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-section .project-img {
+        max-height: 180px;
+    }
 }
 
 /* Resume */
@@ -1182,3 +1228,4 @@ footer .copyright a {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
